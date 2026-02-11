@@ -1,2 +1,2 @@
 # Personal_website
-个人博客网站
+it is my personal website

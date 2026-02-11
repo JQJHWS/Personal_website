@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星辰物语 | 个人博客</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 粒子背景 -->
+  <canvas id="particles"></canvas>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="logo-text">✦ 星辰物语</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">首页</a></li>
+      <li><a href="#about" class="nav-link">关于</a></li>
+      <li><a href="#blog" class="nav-link">博客</a></li>
+      <li><a href="#skills" class="nav-link">技能</a></li>
+      <li><a href="#contact" class="nav-link">联系</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+      <span class="sun">☀</span>
+      <span class="moon">☽</span>
+    </button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- 主内容区 -->
+  <main>
+    <!-- Hero 区域 -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">你好，我是</p>
+        <h1 class="hero-title">
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor-blink">|</span>
+        </h1>
+        <p class="hero-desc">探索技术与创意的边界 · 记录思考与成长的轨迹</p>
+        <div class="hero-buttons">
+          <a href="#blog" class="btn btn-primary">
+            <span>阅读博客</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">与我联系</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>向下滚动</span>
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于区域 -->
+    <section id="about" class="section about-section">
+      <h2 class="section-title">
+        <span class="title-accent">01.</span> 关于我
+      </h2>
+      <div class="about-content">
+        <div class="about-image-wrapper">
+          <div class="about-image">
+            <div class="image-placeholder">
+              <span>👤</span>
+            </div>
+            <div class="image-glow"></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="about-intro">热爱编程与创造的独立开发者</p>
+          <p>这里是记录灵感与思考的空间。我热衷于探索前沿技术，将想法转化为现实。从代码到设计，从逻辑到美学，每一篇博文都是这段旅程的见证。</p>
+          <div class="about-tags">
+            <span class="tag">前端开发</span>
+            <span class="tag">全栈</span>
+            <span class="tag">设计</span>
+            <span class="tag">写作</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 博客区域 -->
+    <section id="blog" class="section blog-section">
+      <h2 class="section-title">
+        <span class="title-accent">02.</span> 最新文章
+      </h2>
+      <div class="blog-grid">
+        <article class="blog-card" data-tilt>
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-image" style="--gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div>
+              <div class="card-content">
+                <span class="card-date">2025-02-10</span>
+                <h3>探索 CSS 现代布局的魔法</h3>
+                <p>深入了解 Grid、Flexbox 与 Container Queries 的巧妙应用</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card" data-tilt>
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-image" style="--gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"></div>
+              <div class="card-content">
+                <span class="card-date">2025-02-08</span>
+                <h3>打造极致的用户体验</h3>
+                <p>从微交互到无障碍设计，细节成就卓越</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card" data-tilt>
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-image" style="--gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"></div>
+              <div class="card-content">
+                <span class="card-date">2025-02-05</span>
+                <h3>AI 辅助开发的实践与思考</h3>
+                <p>如何将 AI 工具融入日常开发工作流</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 技能区域 -->
+    <section id="skills" class="section skills-section">
+      <h2 class="section-title">
+        <span class="title-accent">03.</span> 技能栈
+      </h2>
+      <div class="skills-container">
+        <div class="skill-item" style="--delay: 0">
+          <div class="skill-icon">⚡</div>
+          <h4>JavaScript / TypeScript</h4>
+          <div class="skill-bar"><div class="skill-progress" style="--width: 90%"></div></div>
+        </div>
+        <div class="skill-item" style="--delay: 1">
+          <div class="skill-icon">🎨</div>
+          <h4>CSS / 响应式设计</h4>
+          <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
+        </div>
+        <div class="skill-item" style="--delay: 2">
+          <div class="skill-icon">⚛️</div>
+          <h4>React / Vue</h4>
+          <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
+        </div>
+        <div class="skill-item" style="--delay: 3">
+          <div class="skill-icon">🛠️</div>
+          <h4>Node.js / 后端</h4>
+          <div class="skill-bar"><div class="skill-progress" style="--width: 80%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="section contact-section">
+      <h2 class="section-title">
+        <span class="title-accent">04.</span> 联系我
+      </h2>
+      <div class="contact-content">
+        <p class="contact-desc">有想法想聊聊？欢迎通过以下方式与我联系</p>
+        <div class="contact-links">
+          <a href="mailto:hello@example.com" class="contact-link" data-tooltip="发送邮件">
+            <span class="icon">✉</span>
+            <span>Email</span>
+          </a>
+          <a href="#" class="contact-link" data-tooltip="GitHub">
+            <span class="icon">⌘</span>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="contact-link" data-tooltip="Twitter">
+            <span class="icon">𝕏</span>
+            <span>Twitter</span>
+          </a>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form">
+            <input type="text" placeholder="你的名字" required>
+            <input type="email" placeholder="你的邮箱" required>
+            <textarea placeholder="想说点什么..." rows="4"></textarea>
+            <button type="submit" class="btn btn-primary">发送消息</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p> crafted with ✦ by 星辰物语 · © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
